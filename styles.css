@@ -1,0 +1,464 @@
+/* --- Estilos para el encabezado del perfil --- */
+.perfil-header, .banner-img {
+    width: 100%; /* Ocupa todo el ancho del contenedor, útil para imágenes y cabecera */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    border-radius: 0 0 15px 15px; /* Redondea solo la parte inferior de los bordes */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Agrega sombra para dar profundidad */
+}
+
+/* --- Estilos para el contenedor del perfil --- */
+.perfil-header {
+    display: flex; /* Usa Flexbox para alinear la foto y el texto en fila */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 15px; /* Espacio entre la foto y el texto */
+    margin-top: -80px; /* Superpone el perfil sobre el banner (efecto visual) */
+    background: rgb(255, 255, 255); /* Fondo blanco suave para destacar el perfil */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para profundidad */
+    padding: 4px 24px; /* Espaciado interno: arriba/abajo 4px, lados 24px */
+    border-radius: 16px; /* Bordes redondeados para suavizar el cuadro */
+    box-shadow: 0 15px 15px rgb(0, 0, 0); /* Sombra más visible para resaltar */
+    width: fit-content; /* El ancho se ajusta al contenido interno */
+    margin-left: auto; /* Centra el contenedor horizontalmente */
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+    position: relative; /* Permite mover el elemento con la propiedad top */
+    top: -100px; /* Ajusta la posición vertical (superpone sobre el banner) */
+}
+
+/* --- Estilos para la foto de perfil --- */
+.foto-perfil {
+    display: block; /* Hace que la imagen sea un bloque y se pueda centrar */
+    margin: 20px auto; /* Centra la imagen y agrega margen arriba/abajo */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para dar profundidad */
+    object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+    border: 3px solid #1976d2; /* Borde azul para resaltar la foto */
+}
+
+/* --- Estilos para la barra de navegación --- */
+.barra-navegacion {
+    background-color: #2c74b2; /* Fondo azul para destacar la barra */
+    margin-top: -50px; /* Ajusta la posición vertical (puede superponer sobre el header) */
+    padding: 10px; /* Espaciado interno para separar los enlaces del borde */
+    display: flex; /* Usa Flexbox para alinear los enlaces en fila */
+    justify-content: left; /* Alinea los enlaces a la izquierda */
+    align-items: center; /* Centra verticalmente los enlaces */
+    gap: -10px; /* Espacio entre enlaces (valor negativo no recomendado, puede causar problemas) */
+    border-radius: 10px; /* Bordes redondeados para suavizar la barra */
+    text-decoration: rgb(0, 0, 0); /* No tiene efecto aquí, se puede eliminar */
+}
+
+/* --- Estilos para los enlaces de la barra de navegación --- */
+.barra-navegacion a {
+    color: white; /* Color de texto blanco para contraste con el fondo azul */
+    margin: 0 15px; /* Espacio horizontal entre enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* --- Efecto al pasar el mouse sobre los enlaces de navegación --- */
+.barra-navegacion a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+    color: #4afffc; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* --- Estilos para las secciones principales (cuadros) --- */
+.section article {
+    max-width: 800px; /* Limita el ancho máximo para mejor legibilidad */
+    display: flex; /* Usa Flexbox para el diseño interno */
+    flex-direction: column; /* Alinea los elementos en columna */
+    margin: 0 auto; /* Centra el artículo horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* --- Estilos para el cuadro de perfil --- */
+#perfil {
+    background-color: white; /* Fondo blanco para destacar el contenido */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 15px 8px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+    text-align: justify; /* Justifica el texto dentro del cuadro */
+    margin-left: 30px; /* Margen izquierdo para separar del borde */
+    margin-top: 10px; /* Margen superior para separar de otros elementos */
+    box-shadow: 0 15px 8px #a7dcf4; /* Sombra azul clara para resaltar */
+
+    transition: 
+        transform 0.2s ease, /* Transición suave para el efecto zoom */
+        background-color 0.2s ease, /* Transición suave para el color de fondo */
+        box-shadow 0.2s ease; /* Transición suave para la sombra */
+}
+/* --- Estilos para los cuadros de habilidades y formación --- */
+#habilidades, #formacion {
+    flex: 1 1 45%; /* Cada cuadro ocupa ~45% del ancho del contenedor */
+    max-width: 48%; /* Máximo ancho para que no se junten demasiado */
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+    background-color: white; /* Fondo blanco para cada cuadro */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de cada cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 15px 8px #a7dcf4; /* Sombra azul clara para profundidad */
+    text-align: justify; /* Justifica el texto dentro de los cuadros */
+    margin-left: 5px; /* Margen izquierdo para separar los cuadros */
+}
+
+/* --- Efecto zoom y cambio de color al pasar el mouse sobre los cuadros --- */
+#perfil:hover, #formacion:hover, #habilidades:hover {
+    transform: scale(1.09); /* Agranda el cuadro ligeramente */
+    background-color: #a7dcf4; /* Cambia el fondo a azul claro */
+    box-shadow: 0 4px 16px rgba(44, 116, 178, 0.15); /* Sombra más intensa */
+}
+
+/* --- Contenedor para los cuadros de habilidades y formación 
+       organiza a ambos cuadros en una misma linea --- */
+.cuadros-flex {
+    display: flex; /* Coloca los hijos en fila horizontal */
+    gap: 20px; /* Espacio entre los cuadros */
+    justify-content: center; /* Centra los cuadros horizontalmente */
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten en pantallas pequeñas */
+}
+
+
+/* --- Estilos para el cuadro de experiencia laboral --- */
+#experiencia {
+    background-color: white; /* Fondo blanco para el cuadro */
+    display: flex; /* Usa Flexbox para el diseño interno */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 15px 8px #a7dcf4; /* Sombra azul clara para profundidad */
+    text-align: justify; /* Justifica el texto dentro del cuadro */
+    margin-right: 10px; /* Margen derecho para separar del borde */
+    margin-left: 10px; /* Margen izquierdo para separar del borde */
+    justify-content: center; /* Centra los hijos horizontalmente */
+    margin-top: 10px; /* Margen superior para separar de otros elementos */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: 
+        transform 0.2s ease, /* Transición suave para el zoom */
+        background-color 0.2s ease, /* Transición suave para el color de fondo */
+        box-shadow 0.2s ease; /* Transición suave para la sombra */
+}
+
+/* --- Efecto zoom y cambio de color al pasar el mouse sobre experiencia --- */
+#experiencia:hover {
+    transform: scale(1.03); /* Agranda el cuadro ligeramente */
+    background-color: #a7dcf4; /* Cambia el fondo a azul claro */
+    box-shadow: 0 4px 16px #ffffff; /* Sombra más intensa */
+    border-radius: 0 15px 15px; /* Bordes redondeados solo en la parte inferior */
+}
+
+/* --- Estilos para el contenedor de redes sociales --- */
+.redes-sociales {
+    display: flex; /* Coloca los iconos en fila horizontal */
+    gap: 20px; /* Espacio entre los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    margin: 20px 0; /* Espacio arriba y abajo del contenedor */
+}
+
+/* --- Estilos para los enlaces de redes sociales --- */
+.redes-sociales a {
+    color: rgb(0, 0, 0); /* Color negro para los iconos */
+    font-size: 2rem; /* Tamaño grande para los iconos */
+    transition: color 0.3s ease; /* Transición suave al cambiar el color */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* --- Efecto al pasar el mouse sobre los iconos de redes sociales --- */
+.redes-sociales a:hover {
+    color: #00BFFF; /* Cambia a azul claro cuando pases el mouse */
+}
+
+
+
+
+/* --- Estilos para el formulario de contacto --- */
+/*--- _________________________________________________________________---*/
+/* --- Estilos para los títulos de sección --- */
+.titulo-seccion {
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor (no aplica en texto) */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-left: auto; /* Centra el elemento horizontalmente */
+    margin-right: auto; /* Centra el elemento horizontalmente */
+    margin-bottom: 10px; /* Espacio debajo del título */
+    margin-top: 30px; /* Espacio arriba del título */
+    font-size: 1.5em; /* Tamaño grande para destacar el título */
+    color: #2c74b2; /* Color azul para resaltar el título */
+}
+
+/* --- Estilos para el formulario de contacto --- */
+documentame cada linea de este codigo/* --- Estilos para el encabezado del perfil --- */
+.perfil-header, .banner-img {
+    width: 100%; /* La imagen del banner ocupa todo el ancho */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 0 0 15px 15px; /* Bordes redondeados en la parte inferior */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra para profundidad */
+}
+
+/* --- Estilos para el contenedor del perfil --- */
+.perfil-header {
+    display: flex; /* Usa Flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 15px; /* Espacio entre la foto y el texto */
+    margin-top: -80px; /* Opcional: superpone el perfil sobre el banner */
+    background: rgb(255, 255, 255); /* Fondo blanco suave */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para profundidad */
+    padding: 4px 24px; /* Espaciado interno */
+    border-radius: 16px; /* Bordes redondeados */
+    box-shadow: 0 15px 15px rgb(0, 0, 0); /* Sombra más visible */    
+    width: fit-content; /* El ancho se ajusta al contenido */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    position: relative; /* Permite mover el elemento con top */
+    top: -100px; /* Opcional: ajusta la posición vertical */
+    
+}
+
+/* --- Estilos para la foto de perfil --- */
+.foto-perfil {
+    display: block; /* Hace que la imagen sea un bloque */
+    margin: 20px auto; /* Centra la imagen y agrega margen */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para profundidad */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border: 3px solid #1976d2; /* Borde azul alrededor de la foto */
+}
+
+/* --- Estilos para la barra de navegación --- */
+.barra-navegacion {
+    background-color: #2c74b2; /* Fondo azul */
+    margin-top: -50px; /* Ajusta la posición vertical */
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Usa Flexbox para los enlaces */
+    justify-content: left; /* Alinea los enlaces a la izquierda */
+    align-items: center; /* Centra verticalmente los enlaces */
+    gap: -10px; /* Espacio entre enlaces (valor negativo no recomendado) */
+    border-radius: 10px; /* Bordes redondeados */
+    text-decoration: rgb(0, 0, 0); /* No tiene efecto aquí, se recomienda eliminar */
+}
+
+/* --- Estilos para los enlaces de la barra de navegación --- */
+.barra-navegacion a {
+    color: white; /* Color de texto blanco */
+    margin: 0 15px; /* Espacio horizontal entre enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* --- Efecto al pasar el mouse sobre los enlaces de navegación --- */
+.barra-navegacion a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+    color: #4afffc; /* Cambia el color del texto al pasar el mouse */
+}
+.div-seccion {
+    margin-top: 20px; /* Espacio arriba de la sección */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra suave para profundidad */
+}
+
+
+
+/* --- Estilos para las secciones principales (cuadros) --- */
+.section article {
+    max-width: 800px; /* Ancho máximo para mejor legibilidad */
+    display: flex; /* Usa Flexbox para el diseño */
+    flex-direction: column; /* Alinea los elementos en columna */
+    margin: 0 auto; /* Centra el artículo horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+#perfil {
+    background-color: white; /* Fondo blanco para cada cuadro */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de cada cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 15px 8px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+    text-align: justify; /* Justifica el texto dentro de los cuadros */
+    margin-left: 30px; /* Margen izquierdo para centrar */
+    margin-top: 10px; /* Margen superior para separar los cuadros */
+    box-shadow: 0 15px 8px #a7dcf4; /* Sombra suave para profundidad */
+
+    transition: 
+        transform 0.2s ease, /* Transición suave para el zoom */
+        background-color 0.2s ease, /* Transición suave para el color de fondo */
+        box-shadow 0.2s ease; /* Transición suave para la sombra */
+}
+ 
+
+/* --- Efecto zoom y cambio de color al pasar el mouse sobre los cuadros --- */
+#perfil:hover, #formacion:hover, #habilidades:hover{
+    transform: scale(1.03); /* Agranda el cuadro ligeramente */
+    background-color: #a7dcf4; /* Cambia el fondo a azul claro */
+    box-shadow: 0 4px 16px rgba(44, 116, 178, 0.15); /* Sombra más intensa */
+}
+.cuadros-flex {
+    display: flex; /* Coloca los hijos en fila horizontal */
+    gap: 20px;     /* Espacio entre los cuadros */
+    justify-content: center; /* Centra los cuadros horizontalmente */
+    flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
+}
+#habilidades, #formacion {
+    flex: 1 1 45%;           /* Cada cuadro ocupa ~45% del ancho del contenedor */
+    max-width: 48%;          /* Máximo ancho para que no se junten demasiado */
+    box-sizing: border-box;  /* Incluye el padding en el ancho */
+    /* ...resto de tus estilos... */
+    background-color: white; /* Fondo blanco para cada cuadro */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de cada cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 15px 8px #a7dcf4; /* Sombra suave para profundidad */
+    text-align: justify; /* Justifica el texto dentro de los cuadros */
+    margin-left: 5px; /* Margen izquierdo para centrar */
+}
+.redes-sociales {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.redes-sociales a {
+  color: rgb(0, 0, 0); /* Cambia el color según tu fondo */
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.redes-sociales a:hover {
+  color: #00BFFF; /* Cambia a un azul claro cuando pases el mouse */
+}
+
+#experiencia {
+    background-color: white; /* Fondo blanco para cada cuadro */
+    display: flex; /* Usa Flexbox para el diseño */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de cada cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 15px 8px #a7dcf4; /* Sombra más intensa */
+    text-align: justify; /* Justifica el texto dentro de los cuadros */
+    margin-right: 10px; /* Margen derecho para centrar */
+    margin-left: 10px; /* Margen izquierdo para centrar */
+    justify-content: center; /* Centra los hijos horizontalmente */
+    margin-top: 10px; /* Margen superior para separar los cuadros */
+    border-radius:  15px; /* Bordes redondeados */
+    
+    transition: 
+        transform 0.2s ease, /* Transición suave para el zoom */
+        background-color 0.2s ease, /* Transición suave para el color de fondo */
+        box -shadow 0.2s ease; /* Transición suave para la sombra */
+} 
+#experiencia:hover {
+    transform: scale(1.03); /* Agranda el cuadro ligeramente */
+    background-color: #a7dcf4; /* Cambia el fondo a azul claro */
+    box-shadow: 0 4px 16px #ffffff; /* Sombra más intensa */
+    border-radius: 0 15px 15px;  
+    
+}
+.titulo-seccion {
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #2c74b2;
+
+}
+/* --- Estilos para el formulario de contacto --- */
+/*--- creamos ---*/
+#contactForm {
+    max-width: 500px;           /* Limita el ancho del formulario */
+    width: 100%;          /* El formulario ocupa todo el ancho disponible */
+    margin: 40px auto;          /* Centra el formulario en la página */
+    background: #8ec6fe;        /* Fondo suave */
+    padding: 24px;              /* Espaciado interno */
+    border-radius: 12px;        /* Bordes redondeados */
+    box-shadow: 0 15px 12px rgba(44, 116, 178, 0.12); /* Sombra suave */
+}
+/* --- definimos los estilos color para el titulo contactame--- */
+#contactForm h1 {
+    text-align: center;     /* Centra el texto del título */
+    font-family: 'Gill Sans';   /* Fuente elegante */
+    width: 100%;         /* El ancho se ajusta al contenido */
+    margin-bottom: 20px;    /* Espacio debajo del título */
+    color: #222;        /* Color del texto */
+}
+/* --- definimos los estilos para los labels del formulario--- */
+#contactForm label {
+    font-weight: bold;          /* Texto de los labels en negrita */
+    margin-bottom: 4px;     /* Espacio debajo de cada label */
+    width: 100%;         /* El ancho se ajusta al contenido */
+    font-size: 1.1em;       /* Tamaño de fuente legible */
+    font-family: 'Gill Sans';       /* Fuente elegante */
+
+}
+/* --- definimos los estilos para los inputs y textarea del formulario--- */
+#contactForm input,
+#contactForm textarea {
+    padding: 8px;       /* Espaciado interno */
+    border: 1px solid #3e1fa5; /* Borde azul */
+    width: 100%;                /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;     /* Incluye el padding en el ancho total */
+    border-radius: 6px;     /* Bordes redondeados */
+    font-size: 1em;      /* Tamaño de fuente legible */
+    margin-bottom: 12px;                /* Espacio debajo de cada campo */
+}
+
+#contactForm button {
+    background: #2c74b2;        /* Color principal del botón */
+    color: white;       /* Color del texto */
+    width: 100%;                /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;     
+    border: none;       /* Sin borde */
+    padding: 10px;      /* Espaciado interno */
+    border-radius: 6px;     /* Bordes redondeados */
+    cursor: pointer;        /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1em;     /* Tamaño de fuente legible */
+    transition: background 0.2s;        /* Transición suave para el fondo */
+}
+
+#contactForm button:hover {
+    background: #2731ff;        /* Color al pasar el mouse */
+    color: #ffffff;     /* Color del texto al pasar el mouse */
+}
+#contactForm .btn-secondary {
+    background: #2c74b2;        /* Color principal del botón */
+    color: white;               /* Color del texto */
+    border: none;                   /* Sin borde */
+    margin-top: 10px;               /* Espacio encima del botón */
+    padding: 10px;      /* Espaciado interno */ 
+    width: 100%;                /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;             /* Incluye el padding en el ancho total */
+    border-radius: 6px;             /* Bordes redondeados */
+    cursor: pointer;                /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1em;     /* Tamaño de fuente legible */
+    transition: background 0.2s;        /* Transición suave para el fondo */
+}
+#contactForm .btn-secondary:hover {
+    background: #2731ff;        /* Color al pasar el mouse */
+    color: #ffffff;     /* Color del texto al pasar el mouse */
+}
+
+/* Mensaje de confirmación */
+#confirmacion {
+    font-weight: bold;      /* Texto en negrita */
+    font-size: 1.1em;           /* Tamaño de fuente legible */
+    color: green;           /* Color verde para éxito */
+    text-align: center;      /* Centra el texto */
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
